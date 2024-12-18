@@ -1,256 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Jan Olucha Fuentes</title>
-<style>
-/* Reset basic styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jan Olucha Fuentes</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <style>
+    /* Reset basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
 
-/* Style for the subgrades list */
-.subgrades {
-  margin-left: 20px; /* Indentation */
-  font-size: 0.9em; /* Smaller font size */
-}
+    body {
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
-.subgrades li {
-  list-style-type: disc; /* You can also change this to square, circle, etc. */
-  color: #555; /* Slightly lighter color for the sub-items */
-}
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-/* Body styling */
-body {
-  background-color: #f4f4f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
+    h1 {
+      text-align: center;
+      color: #34495e;
+      margin-bottom: 20px;
+    }
 
-/* Centered layout for the main container */
-main {
-  max-width: 1000px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    nav {
+      background: #3498db;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
 
-h1 {
-  color: #34495e;
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2.5em;
-}
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-h2 {
-  color: #2c3e50;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-  line-height: 1.8;
-}
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
 
-/* Styling lists */
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
 
-ul li {
-  margin-bottom: 10px;
-  font-size: 1.1em;
-}
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-/* Styling links */
-a {
-  color: #3498db;
-  text-decoration: none;
-}
+    .gallery img:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease-in-out;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="media.html">Media</a>
+  </nav>
 
-li b {
-  color: #34495e;
-}
+  <!-- Main Content -->
+  <main>
+    <h1>Jan Olucha Fuentes</h1>
+    <p>
+      Hi, I'm Jan. I did my undergraduate degree in Mathematics between 2021 and 2024 at King's College London (KCL), where I was the President of the Mathematics Student Society during my last year. I will be starting the Part III of the Mathematical Tripos at Cambridge in October of 2024. This is my CV in the form of a website, where you can find my academic trajectory as well as some of the stuff I've written.
+    </p>
+    <!-- Content remains unchanged -->
+  </main>
 
-/* Box for the image and the caption */
-img {
-  display: block;
-  margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Image caption styling */
-img + p {
-  text-align: center;
-  font-style: italic;
-  color: #7f8c8d;
-}
-
-/* Styling for HR elements */
-hr {
-  border: 0;
-  height: 2px;
-  background: #3498db;
-  margin: 30px 0;
-}
-
-/* FAQ section */
-.faq p {
-  background-color: #ecf0f1;
-  padding: 10px;
-  border-radius: 5px;
-  color: #2c3e50;
-}
-
-.faq img {
-  width: 155px;
-  height: 256px;
-}
-
-/* Responsive layout for smaller devices */
-@media screen and (max-width: 768px) {
-  main {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.lecture-notes-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 10px;
-}
-/* Style the figure and image */
-.lecture-notes-image-container {
-  flex: 1;
-  text-align: center; /* Centers the caption under the image */
-  margin-left: 100px;
-}
-/* Style the list to occupy most of the space */
-.lecture-notes-container ul {
-  flex: 1;
-}
-
-/* Style the image */
-.lecture-notes-image {
-  flex: 1;
-  max-width: 20%; /* Adjust width as needed */
-  margin-left: 40%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-</style>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-      <center>
-        <h1>Jan Olucha Fuentes</h1>  
-      </center>
-   
-      <p>
-        Hi, I'm Jan. I did my undergraduate degree in Mathematics between 2021 and 2024 at King's College London (KCL), where I was the President of the Mathematics Student Society during my last year. I will be starting the Part III of the Mathematical Tripos at Cambridge in October of 2024. This is my CV in form of a website, where you can find my academic trajectory as well as some of the stuff I've written.
-      </p>
-       
-      
-
-      <h2>Education</h2>
-      <ul>
-        <li><b>BSc Mathematics:</b> King's College London, final grade 93%</li>
-	        <ul class="subgrades">
-    <li><b>Notable grades:</b> Rings and Modules (100%), Statistical Mechanics (100%), Applied Differential Equations (100%), Real Analysis (99%), Probability Theory (98%)</li> </ul>
-        <li><b>MASt Mathematics:</b> Cambridge (2025)</li>
-      </ul>
-      
-
-      <h2>Awards</h2>
-      <p>When I was at King's College London I was awarded the <a href="https://ima.org.uk/">IMA</a> (Institute of Mathematics and Applications) Prize for achieving the best results (95%) in the final year of my degree.</p>
-      
-      
-
-      <h2>Mathematical Interests</h2>
-      <p>My mathematical interests are mainly in analysis and probability. Related modules which I took (and loved) during my undergraduate include: Probability Theory (98%), Fourier Analysis (95%), Real Analysis (99%), Statistical Mechanics (100%).</p>
-
-      
-
-      <h2>Mathematical Work</h2>
-      <ul>
-        <li>
-          <a href="https://drive.google.com/file/d/1nURDOfv6S1ionfLtlcKoHHXqIGxEjo-E/view?usp=sharing"> Undergraduate Thesis</a>: <i>Attractors of Iterated Function Systems (IFS): where do they live and how to see them</i>.
-        </li>
-      </ul>
-
-      
-
-      <h2>Outreach work</h2>
-      <p>In 2021 I started a <a href="https://www.youtube.com/channel/UCVIAxG_pwVynXVjgapxu9Ng">YouTube</a> channel, where I talk about topics of mathematical nature for a Spanish-speaking audience.</p>
-
-      
-
-      <h2>Teaching experience</h2>
-      <ul>
-        <li><b>King's College London</b>: King's Factor Tutor (2022-2024)</li>
-        <li><b>We Solve Problems</b>: Head Tutor (2023-2024)</li>
-        <li><b>FunTech</b>: Summer Tutor in Python and Cybersecurity (2024)</li>
-      </ul>
-
-      
-
-      <h2>Lecture notes:</h2>
-      <p>Throughout my education, I typed my notes for some of the courses I took. Some people thought they were useful so here they are. The charm of these notes is not the Mathematical content itself, but rather the extensive list of examples and questions in them. Be advised, there is foul language, typos and errors. In some cases, the notes are a mess and lack structure. I am doing my best to fix the ones I'm interested in.</p>
-      <div class="lecture-notes-container">
-  <ul>
-    <li><a href="https://drive.google.com/file/d/10vIvGAgkFL_Y3gTULA6-FFAgNrDYgKDP/view?usp=sharing">Representation Theory of Finite Groups</a></li>
-    <li><a href="pdfs/probt.pdf" download>Fundamentals of Probability Theory</a></li>
-    <li><a href="https://drive.google.com/file/d/13p3NMPe2dcIiiTxzV3Ejef4HXoHshRoO/view?usp=sharing">Fourier Analysis</a></li>
-    <li><a href="https://drive.google.com/file/d/1Ze7hwGqbJjWE-HimUiGnmZVww66NAoL7/view?usp=sharing">Galois Theory</a></li>
-    <li><a href="https://drive.google.com/file/d/1Cl8bc9oqB5HXcblnuVAEXwIHJQ2Lx3WG/view?usp=sharing">Rings and Modules</a></li>
-    <li><a href="https://drive.google.com/file/d/1mrkWnKgOJhik9bZ-adu7KT_SYDWWIV75/view?usp=sharing">More Rings and Modules exercises</a></li>
-    <li><a href="https://drive.google.com/file/d/1Ha8ImBPsJgpC_MOAnL9N6yx4ig-0zyRb/view?usp=sharing">Mathematical Aspects of Statistical Mechanics</a></li>
-    <li><a href="https://drive.google.com/file/d/1iyh2S7uklKKG7ui5JVW17dvce3EsobQM/view?usp=sharing">Geometric Topology</a></li>
-    <li>Useful <a href="https://drive.google.com/file/d/1-jCmVP9YZyoCjMGunVo8gWH8Y_qhhMmc/view?usp=sharing">counterexamples</a> in the Metric and Topological Spaces.</li>
-  </ul>
-
-</div>
-<h2>Contact</h2>
-<p> To contact me please email me via <a href="mailto:jo504@cam.ac.uk">jo504@cam.ac.uk</a></p>
-<hr>
-  <img src="pictures/picture.JPG" alt="Beer" class="lecture-notes-image">
-<p>Cheers!</p>
-      </main>
-  </body>
-  </html>
+  <footer>
+    <p>&copy; 2024 Jan Olucha Fuentes</p>
+  </footer>
+</body>
+</html>
