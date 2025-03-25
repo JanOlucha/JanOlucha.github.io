@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Museum</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Maths Museum</h1>
+    </header>
+    <main>
+        <section class="simulation">
+            <h2>Simulation 1: Percolation Theory</h2>
+            <video autoplay loop muted playsinline>
+                <source src="percolation.mp4" type="video/mp4">
+                <source src="percolation.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <button class="toggle-description">Show Description</button>
+            <p class="description" style="display: none;">
+                This simulation demonstrates percolation on a grid. The percolation threshold is around \( p_c \approx 0.5927 \) for the square lattice. As \( p \) increases past \( p_c \), a giant component emerges.
+            </p>
+        </section>
+        
+        <section class="simulation">
+            <h2>Simulation 2: Random Walk on a Lattice</h2>
+            <img src="random-walk.gif" alt="Random Walk Simulation">
+            <button class="toggle-description">Show Description</button>
+            <p class="description" style="display: none;">
+                A simple symmetric random walk on \( \mathbb{Z}^2 \) where the walker moves to one of the four neighboring sites with equal probability. This is a Markov process.
+            </p>
+        </section>
+    </main>
+    <script>
+        document.querySelectorAll('.toggle-description').forEach(button => {
+            button.addEventListener('click', () => {
+                const description = button.nextElementSibling;
+                description.style.display = description.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
