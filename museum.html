@@ -61,14 +61,16 @@
     }
 
     button {
-      background: #3498db;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
+    display: block;
+    margin: 10px auto 0; /* Centers button horizontally */
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 
     button:hover {
       background: #2980b9;
@@ -105,8 +107,7 @@
     <section class="simulation">
       <h2>Percolation Theory</h2>
       <video autoplay loop muted playsinline>
-        <source src="percolation.mp4" type="video/mp4">
-        <source src="percolation.webm" type="video/webm">
+        <source src="/museum/percolation2.gif">
         Your browser does not support the video tag.
       </video>
       <button class="toggle-description">Show Description</button>
