@@ -93,6 +93,33 @@
       font-size: 0.9em;
       color: #7f8c8d;
     }
+.exposition-list {
+  background: #3498db;  /* Matches the nav bar */
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.exposition-list li {
+  display: inline-block;
+  margin: 5px 15px;
+}
+
+.exposition-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.exposition-list a:hover {
+  background: #2980b9; /* Slightly darker blue */
+}
+    
   </style>
 </head>
 <body>
@@ -107,7 +134,7 @@
     <h1>Maths Museum</h1>
     <p>Welcome to the Maths Museum. I am a strong believer that as a Mathematician I have a duty to share the inspiration that I get from Mathematics to the general public. This is why set up this page where you can find the simulations / pictures I have coded through my career. Hopefully they inspire you too!  </p>
 
-<ul>
+<ul class="exposition-list">
   <li><a href="#percolation">Percolation Theory</a></li>
   <li><a href="#rwdp">Random Walk on Dynamical Percolation</a></li>
   <li><a href="#fpp">First Passage Percolation</a></li>
