@@ -8,6 +8,9 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
+    html {
+  scroll-behavior: smooth;
+}
     body {
       background-color: #f4f4f9;
       color: #333;
@@ -103,23 +106,29 @@
   <main>
     <h1>Maths Museum</h1>
     <p>Welcome to the Maths Museum. I am a strong believer that as a Mathematician I have a duty to share the inspiration that I get from Mathematics to the general public. This is why set up this page where you can find the simulations / pictures I have coded through my career. Hopefully they inspire you too!  </p>
+
+<ul>
+  <li><a href="#percolation">Percolation Theory</a></li>
+  <li><a href="#rwdp">Random Walk on Dynamical Percolation</a></li>
+  <li><a href="#fpp">First Passage Percolation</a></li>
+</ul>
     
     <section class="simulation">
-      <h2>Percolation Theory</h2>
+      <h2 id="percolation">Percolation Theory</h2>
        <img src="/museum/percolation2.gif" alt="Percolation Simulation">
       <button class="toggle-description">Show Description</button>
       <p class="description">Site Percolation is a field of probability that attempts to model the connectivity properties of porous media, e.g: imagine a coffee flowing through the coffee grounds in a percolator. The formal definition of the model is the following: for a graph \(G=(V,E)\), the site Percolation model on \(G\) with parameter \(p\) is the probability measure \(\mathbf{P}_p=\bigotimes_{v\in V(G)} \text{Ber}(p) \) on \(\{0,1\}^V\). That is to say, to each site \(v\) of the graph, you assign an independent Bernoulli random variable with parameter \(p\). If the random variable samples a \(1\), we interpret this as the site being open, so liquid can flow through the site. There are many, far too many, interesting things one could say about percolation, so I definitely cannot tell you about all of them here. Perhaps the most fundamental of these properties is the phase transition of the model. As it turns out, as \(p\) increases, it will meet a magic value - \(p_c\approx 0.592\) for site percolation on \(\mathbf{Z}^2\)- after which an infinitely large cluster will magically appear. In this simulation, you are seeing something called the monotone coupling, which allows us to see clearly which sites open as \(p\) increases. I show in blue the connected cluster to the origin, and one can see that at some point, the connected component explodes in size! It is a fascinating thing how such a simple to state model expresses the rich behavior it does!</p>
     </section>
 
     <section class="simulation">
-      <h2>Random Walk on a Dynamical Percolation</h2>
+      <h2 id="rwdp">Random Walk on a Dynamical Percolation</h2>
       <img src="/museum/random_walk_memory.gif" alt="RWDP">
       <button class="toggle-description">Show Description</button>
       <p class="description"> You've hopefully read about the Percolation model in the previous exposition. You thought it was too boring? Don't worry, because we can add many layers to the Percolation cake: firstly, we can make the edges (I talked about site percolation in the previous exposition, but nothing prevents you from changing everything into edges) refresh independently from each other according to an exponential random clock with rate \(\mu\). Once the clock rings, we toss a coin with probability \(p\) of heads, and decide if the edge opens or closes. This is called dynamical percolation. On top of all of this business, we put a particle that attempts to perform a random walk on the graph, but can only walk through open edges! This is the object of study in my master's thesis, and it has given me nightmares some days. Once again, there are many things, far too technical for me to explain here, that one could study about this model. What I study is, roughly speaking, how fast the particle spreads with time. In particular, I am looking at bounds of the so-called diffusion constant \(\sigma^2\), which is defined as \(\sigma^2=\lim_{t\to\infty}\mathbf{E}[d(0,X_t)^2]\), where \((X_t)_{t\geq 0}\) is the random walk on the dynamical percolation. What you are seeing now is the random walk on the dynamical percolation, and you might notice some extra blue edges that "trail off" behind the particle. This is the so-called memory process, an important object that keeps track of the edges that the particle has a memory of. Keeping track of these edges turns out to be a crucial technique to study this otherwise very complicated model! </p>
     </section>
 
 <section class="simulation">
-      <h2>First Passage Percolation (1/4)</h2>
+      <h2 id="fpp">First Passage Percolation (1/4)</h2>
       <img src="/museum/fppseep.gif" alt="RWDP">
       <button class="toggle-description">Show Description</button>
       <p class="description"> You thought I was done with percolation? Ha! Let me tell you about First Passage Percolation. This is the natural extension to the Percolation Model; after all, that model tried to model flow of liquid substances through porous media, but guess what, liquids don't move instantly, they take some time to cross the edges of the graph. So what we do, is we consider the following model, which clearly has a Percolation flavour, and in fact generalises it (can you think how?): to each edge \(e\in E\) of your graph, you assign an i.i.d random variable \(\tau_e\) that is non-negative real valued. We interpret these objects as the time taken to pass through edge \(e\). The natural thing to define now is simply the passage time through a path \(\Gamma\), which is simply going to be \(T(\Gamma):=\sum_{e\in \Gamma}\tau_e\), and similarly, the travel time between two points \(x,y\in V\), simply will be \(T(x,y):=\inf_{\Gamma}T(\Gamma)\) where the infimum is taken over paths \(\Gamma\) such that \(x\) is connected to \(y\) via \(\Gamma\). In this simulation, you are seeing, for different values of time \(t\), the set of points \(y\), such that \(T(A,y)\leq t\), where \(A\) is the "left-wall". I will talk more about this in the next exposition.</p>
