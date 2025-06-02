@@ -215,6 +215,7 @@ hr {
 
 .note-entry img {
   width: 200px;
+margin: 0; /* removes auto-centering */
   height: auto;
   object-fit: cover;
   border-radius: 10px;
