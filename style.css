@@ -182,13 +182,6 @@ hr {
       font-size: 0.9em;
       color: #7f8c8d;
     }
-.lecture-notes-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 10px;
-}
-/* Style the figure and image */
 .lecture-notes-image-container {
   flex: 1;
   text-align: center; /* Centers the caption under the image */
@@ -201,7 +194,7 @@ hr {
 
 /* Style the image */
 .lecture-notes-image {
-    flex: 1;
+  flex: 1;
   max-width: 20%; /* Adjust width as needed */
   margin-left: 40%;
   border-radius: 10px;
