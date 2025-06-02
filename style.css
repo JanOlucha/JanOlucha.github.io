@@ -195,7 +195,7 @@ hr {
 /* Style the image */
 .lecture-notes-image {
   flex: 1;
-  width: 10%; /* Adjust width as needed */
+  max-width: 25%; /* Adjust width as needed */
 text-align: center;
   margin-left: 40%;
   border-radius: 10px;
