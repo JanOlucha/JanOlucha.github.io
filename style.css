@@ -82,11 +82,14 @@ li b {
 }
 
 /* Box for the image and the caption */
+
 img {
   display: block;
   margin: 20px auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 100%;      /* prevents overflow */
+  height: auto;         /* maintains aspect ratio */
 }
 
 /* Image caption styling */
