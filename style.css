@@ -207,15 +207,19 @@ hr {
 
 
 .note-entry {
-  display: flex;
+display: flex;
   align-items: flex-start;
-  margin-bottom: 30px;
-  gap: 20px;
+  gap: 20px; /* space between image and text */
+  margin-bottom: 2rem;
 }
 
 .note-entry img {
   width: 200px;
-margin: 0; /* removes auto-centering */
+display: inline-block;
+  margin: 0;
+  align-self: flex-start; /* optional: keeps it top-aligned with the text */
+
+  
   height: auto;
   object-fit: cover;
   border-radius: 10px;
