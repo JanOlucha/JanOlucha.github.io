@@ -10,6 +10,8 @@
     <title>My Website</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+	  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body>
 	   <nav>
@@ -32,10 +34,27 @@
        
  
 
-      <h2>Mathematical Interests</h2>
-      <p>My mathematical interests are mainly in Probability. Some keywords of my interests: Monte-Carlo Simulation, Variance Reduction Algorithms, Rare Event Simulation, Feynman-Kac Measures, etc. </p>
+     <h2>Mathematical Interests</h2>
 
-      
+<p>
+  My mathematical interests are mainly in Probability. Some keywords of my
+  interests: Monte Carlo simulation, variance reduction algorithms, rare-event
+  simulation, Feynman–Kac measures, etc.
+</p>
+
+<p>
+  Currently, I am interested in understanding the theory behind algorithms for
+  computing expectations of the form
+  \[
+    \mathbf{E}\left[
+      f(X_t)\prod_{s=1}^{t} G_s(X_s)
+    \right],
+  \]
+  where \((X_t)_{t\geq 0}\) is a discrete-time Markov chain on a measurable
+  state space \((E,\mathcal{E})\), \(f:E\to\mathbf{R}\) is a test function,
+  and \((G_t)_{t\geq 0}\) is a collection of functions on \(E\), called
+  potential functions.
+</p>
 
     <h2>Academic CV</h2>
 		
